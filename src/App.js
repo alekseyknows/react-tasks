@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import CounterContainer from './containers/CounterContainer';
+import ParentContainer from './containers/ParentContainer';
 
 class App extends Component {
     render() {
-        return (
-            <div className="container">
-                <CounterContainer />
-            </div>
-        );
+        return <ParentContainer />;
     }
 }
 

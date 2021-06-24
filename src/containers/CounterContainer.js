@@ -1,45 +1,44 @@
-// здесь вся логика счетчика (хранение + изменение), не должен содержать html
-// в return <Counter {...props}/>
-
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import { useMemo } from 'react';
+import { useEffect } from 'react';
 import Counter from '../views/Counter/index';
 
-class CounterContainer extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            counter: 0,
-        };
-    }
+function CounterContainer(props) {
+    const [counter, setCounter] = useState(props.initialValue);
+    const prevNumChildren = props.prevNumChildren;
 
-    increment = () => {
-        this.setState((state) => ({
-            counter: ++state.counter,
-        }));
+    useEffect(() => {
+        if (props.numChildren > prevNumChildren) {
+            handleEvenValue();
+        }
+        if (props.numChildren < prevNumChildren) {
+            handleOddValue();
+        }
+    }, [props.numChildren]);
+
+    const handleEvenValue = () => {
+        if (counter % 2 === 0 && counter !== 0) {
+            setCounter(counter + 1);
+        }
     };
 
-    decrement = () => {
-        this.setState((state) => ({
-            counter: --state.counter,
-        }));
+    const handleOddValue = () => {
+        if (counter % 2 !== 0 && counter !== 0) {
+            setCounter(counter - 1);
+        }
     };
 
-    reset = () => {
-        this.setState(() => ({
-            counter: 0,
-        }));
-    };
-
-    render() {
-        return (
+    return useMemo(
+        () => (
             <Counter
-                counter={this.state.counter}
-                increment={this.increment}
-                decrement={this.decrement}
-                reset={this.reset}
+                counter={counter}
+                increment={() => setCounter(counter + 1)}
+                decrement={() => setCounter(counter - 1)}
+                reset={() => setCounter(0)}
             />
-        );
-    }
+        ),
+        [counter]
+    );
 }
 
 export default CounterContainer;
