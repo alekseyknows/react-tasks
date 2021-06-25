@@ -8,13 +8,13 @@ function CounterContainer(props) {
     const prevNumChildren = props.prevNumChildren;
 
     useEffect(() => {
-        if (props.numChildren > prevNumChildren) {
+        if (props.numChildren > prevNumChildren && props.clicked === 'add') {
             handleEvenValue();
         }
-        if (props.numChildren < prevNumChildren) {
+        if (props.numChildren < prevNumChildren && props.clicked === 'remove') {
             handleOddValue();
         }
-    }, [props.numChildren]);
+    }, [props.numChildren, props.clicked]);
 
     const handleEvenValue = () => {
         if (counter % 2 === 0 && counter !== 0) {

@@ -4,19 +4,23 @@ import ParentCounter from '../views/ParentCounter';
 
 function ParentContainer() {
     const [numChildren, setNumChildren] = useState(1);
+    const [clicked, setClicked] = useState('none');
 
     const prevNumChildren = usePrevious(numChildren);
 
     const addCounter = () => {
+        setClicked('add');
         setNumChildren(numChildren + 1);
     };
 
     const removeCounter = () => {
+        setClicked('remove');
         if (numChildren === 1) return;
         setNumChildren(numChildren - 1);
     };
 
     const resetCounter = () => {
+        setClicked('reset');
         setNumChildren(1);
     };
 
@@ -30,6 +34,7 @@ function ParentContainer() {
                     initialValue={0}
                     numChildren={numChildren}
                     prevNumChildren={prevNumChildren}
+                    clicked={clicked}
                 />
             );
         }
