@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
+    HashRouter,
     Switch,
     Route,
 } from 'react-router-dom';
@@ -12,7 +12,7 @@ export default function RounterContainer() {
     const existingPages = ['/', '/counters', '/about-us'];
 
     return (
-        <Router>
+        <HashRouter>
             <Switch>
                 <Route
                     exact
@@ -21,6 +21,6 @@ export default function RounterContainer() {
                 />
                 <Route component={NotFound} />
             </Switch>
-        </Router>
+        </HashRouter>
     );
 }
