@@ -1,7 +1,3 @@
-// arrow function
-// здесь вся html разметка
-// подключает переданные props для кнопок
-
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
@@ -26,7 +22,6 @@ const Counter = (props) => {
             <ButtonGroup className={classes.buttons}>
                 <Button
                     className={classes.incrementButton}
-                    //onClick={() => props.increment(props.counter)}
                     onClick={props.increment}
                 >
                     Increment (+1)

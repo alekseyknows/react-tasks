@@ -1,6 +1,3 @@
-// material-ui
-// стили, представленные в виде js
-
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles({
