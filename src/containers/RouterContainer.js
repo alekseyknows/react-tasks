@@ -9,7 +9,7 @@ import NotFound from '../views/NotFound';
 
 export default function RounterContainer() {
 
-    const existingPages = ['/', '/counters', '/about-us'];
+    const existingPages = ['/', '/counters', '/about-us', '/login'];
 
     return (
         <HashRouter>
