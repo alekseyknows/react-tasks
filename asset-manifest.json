@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/react-tasks/static/js/main.251ea4c8.chunk.js",
-    "main.js.map": "/react-tasks/static/js/main.251ea4c8.chunk.js.map",
+    "main.js": "/react-tasks/static/js/main.fbce3593.chunk.js",
+    "main.js.map": "/react-tasks/static/js/main.fbce3593.chunk.js.map",
     "runtime-main.js": "/react-tasks/static/js/runtime-main.e1e250e7.js",
     "runtime-main.js.map": "/react-tasks/static/js/runtime-main.e1e250e7.js.map",
-    "static/js/2.cb63d27c.chunk.js": "/react-tasks/static/js/2.cb63d27c.chunk.js",
-    "static/js/2.cb63d27c.chunk.js.map": "/react-tasks/static/js/2.cb63d27c.chunk.js.map",
+    "static/js/2.987f3125.chunk.js": "/react-tasks/static/js/2.987f3125.chunk.js",
+    "static/js/2.987f3125.chunk.js.map": "/react-tasks/static/js/2.987f3125.chunk.js.map",
     "index.html": "/react-tasks/index.html",
-    "static/js/2.cb63d27c.chunk.js.LICENSE.txt": "/react-tasks/static/js/2.cb63d27c.chunk.js.LICENSE.txt",
+    "static/js/2.987f3125.chunk.js.LICENSE.txt": "/react-tasks/static/js/2.987f3125.chunk.js.LICENSE.txt",
     "static/media/about-us-mock.c82c7e94.png": "/react-tasks/static/media/about-us-mock.c82c7e94.png"
   },
   "entrypoints": [
     "static/js/runtime-main.e1e250e7.js",
-    "static/js/2.cb63d27c.chunk.js",
-    "static/js/main.251ea4c8.chunk.js"
+    "static/js/2.987f3125.chunk.js",
+    "static/js/main.fbce3593.chunk.js"
   ]
 }
